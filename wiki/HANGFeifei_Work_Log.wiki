@@ -1,0 +1,4 @@
+= Work Log =
+
+== 10/12/2009 ==
+*Hello, World!!!*
