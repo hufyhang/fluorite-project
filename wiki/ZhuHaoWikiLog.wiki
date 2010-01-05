@@ -1,6 +1,4 @@
 
-
-
 = 1/5/2010 =
 
 We do the cycle report 2 and record our presentation.
@@ -31,5 +29,4 @@ Discuss our project. for example: the function that we will implement based on t
 = 10/29/2009 =
 
 Today we go to the company to have a meeting with clients to get information about our flourite-project.
-
 
