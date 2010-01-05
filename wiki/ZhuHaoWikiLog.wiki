@@ -1,13 +1,35 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
-
-Add your content here.
 
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= 1/5/2010 =
+
+We do the cycle report 2 and record our presentation.
+
+
+= 1/1/2010 = 
+
+We have a little Online meeting to image our future. 
+
+== Happy New Year !! ==
+
+
+= 12/26/2009 =
+
+Discuss the database and update our ER diagram.
+
+
+= 12/12/2009 =
+
+We have a meeing with client to talk about our GUI. And do some modifications. At last, we finish the first cicle report.
+
+
+= 11/28/2009 =
+
+Discuss our project. for example: the function that we will implement based on the clients' requirement.
+
+
+= 10/29/2009 =
+
+Today we go to the company to have a meeting with clients to get information about our flourite-project.
+
+
