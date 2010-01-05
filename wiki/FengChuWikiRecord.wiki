@@ -1,3 +1,31 @@
+= 1/3/2010 = == New year!!! ==
+
+The second cycle will finish. we centain 
+
+= 12/22/2009 =
+
+Last week we spent lots of time discuss and design the database. Finally, the database is finish, but I think this database is not good enough. It will have more modify in the future.
+
+= 12/10/2009 =
+
+We bring our GUI to the client, and get the feedback.
+The Client asked us many questions, some of these are bad news for us.
+=== We finish the first cycle, and the next cycle will start in next week. ===
+
+
+= 11/25/2009 =
+
+Today we talk about this system. What function we can do, and what problem we will have.
+There are some function should be difficult, and the database is still in discussing.
+
+= 11/12/2009 =
+
+Discuss the Database, but we are not get any result today.
+
+= 10/29/2009 =
+
+Meeting with the client and get more infomation about this project in the client company.
+
 = 10/13/2009 =
 
 Connect the code.google and Visual studio 2008 through SVN.
