@@ -3,6 +3,6 @@
 Connect the code.google and Visual studio 2008 through SVN.
 Test and make sure this connect successful.
 
-= 30/9/2009 =
+= 9/30/2009 =
 
 Created the project on google.code which is named fluorite-project
