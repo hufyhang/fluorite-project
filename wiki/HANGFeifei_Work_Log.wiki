@@ -1,4 +1,22 @@
 = Work Log =
 
+== 1/5/2010 ==
+Debuging with the last version.
+
+== 12/25/2009 ==
+Final designing of GUI.
+
+== 12/15/2009 ==
+Get remote connection with MySQL( database ) from GUI on a client machine in LAN.
+
+== 11/30/2009 ==
+Came out the idea of using Class Library in GUI.
+
+== 11/2/2009 ==
+First version of GUI designing.
+
+== 10/29/2009 ==
+Meeting with the client and get more infomation about this project in the client company. 
+
 == 10/12/2009 ==
 *Hello, World!!!*
