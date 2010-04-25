@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66364F83-AD3E-4B2A-97DF-30CC5DA6E548}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fluorite</RootNamespace>
+    <AssemblyName>Fluorite</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\My Workstation\C#\2Dooo\2Dooo\bin\Release\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQLDriverCS, Version=3.0.1735.36021, Culture=neutral, PublicKeyToken=172f94dfb0faf263, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MySQLDriverCS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\UCCaikuangUI.cs" />
+    <Compile Include="Control\UCCaiwuUI.cs" />
+    <Compile Include="Control\UCCheckPassword.cs" />
+    <Compile Include="Control\UCCollectWorkGroups.cs" />
+    <Compile Include="Control\UCController.cs" />
+    <Compile Include="Control\UCExitSystem.cs" />
+    <Compile Include="Control\UCGanzaoUI.cs" />
+    <Compile Include="Control\UCGenerateSN.cs" />
+    <Compile Include="Control\UCGetUserID.cs" />
+    <Compile Include="Control\UCLogin.cs" />
+    <Compile Include="Control\UCMySQLController.cs" />
+    <Compile Include="Control\UCMySQLUpdate.cs" />
+    <Compile Include="Control\UCSignOut.cs" />
+    <Compile Include="Control\UCStartupSystem.cs" />
+    <Compile Include="Control\UCYaojiUI.cs" />
+    <Compile Include="Control\UCYunshuUI.cs" />
+    <Compile Include="Model\MySQLModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaikuangUI.resx">
+      <DependentUpon>CaikuangUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CaiwuUI.resx">
+      <DependentUpon>CaiwuUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GanzaoUI.resx">
+      <DependentUpon>GanzaoUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SystemHost.resx">
+      <DependentUpon>SystemHost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\YaojiUI.resx">
+      <DependentUpon>YaojiUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\YunshuUI.resx">
+      <DependentUpon>YunshuUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\CaikuangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CaikuangUI.Designer.cs">
+      <DependentUpon>CaikuangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CaiwuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CaiwuUI.Designer.cs">
+      <DependentUpon>CaiwuUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GanzaoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GanzaoUI.Designer.cs">
+      <DependentUpon>GanzaoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SystemHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SystemHost.Designer.cs">
+      <DependentUpon>SystemHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\YaojiUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\YaojiUI.Designer.cs">
+      <DependentUpon>YaojiUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\YunshuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\YunshuUI.Designer.cs">
+      <DependentUpon>YunshuUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
