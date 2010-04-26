@@ -75,6 +75,7 @@ namespace Fluorite.Model
                 MySQLDataReader reader = command.ExecuteReaderEx();
                 MySQLDataAdapter adapter = new MySQLDataAdapter(sql, con);
                 adapter.Fill(dataTable);
+                con.Close();
             }
             catch (MySQLException e)
             {
