@@ -12,6 +12,7 @@ namespace Fluorite.View
     {
         private String Username = null;
         private String IDSQL = @"SELECT charging_id FROM charging_sheet";
+        private NumericUpDown CurrentNumber = null;
 
         public YaojiUI(String Username)
         {
@@ -54,5 +55,106 @@ namespace Fluorite.View
         {
             this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM charging_sheet");
         }
+
+        #region VKeyboard
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@".");
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"0");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send("{BKSP}");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"1");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"2");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"3");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"4");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"5");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"6");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"7");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"8");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.SelectControl();
+            SendKeys.Send(@"9");
+        }
+
+        protected void SelectControl()
+        {
+            try
+            {
+                this.CurrentNumber.Select();
+            }
+            catch (NullReferenceException)
+            {
+            }
+        }
+
+        private void inputA_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.CurrentNumber = this.inputA;
+        }
+
+        private void inputB_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.CurrentNumber = this.inputB;
+        }
+
+        private void inputC_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.CurrentNumber = this.inputC;
+        }
+        #endregion
     }
 }
