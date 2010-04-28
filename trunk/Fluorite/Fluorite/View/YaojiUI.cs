@@ -21,6 +21,10 @@ namespace Fluorite.View
             this.Text += this.Username;
             this.inputSN.Text = new Control.UCGenerateSN(this.IDSQL).ToString();
             this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM charging_sheet");
+            if (!new Extend.CollectAutoCompleteSource().Execute(this.inputMedicine))
+            {
+                MessageBox.Show("Extend.CollectAutoCompleteSource组件错误", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

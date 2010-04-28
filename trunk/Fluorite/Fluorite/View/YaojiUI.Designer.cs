@@ -350,6 +350,8 @@
             // 
             // inputMedicine
             // 
+            this.inputMedicine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.inputMedicine.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.inputMedicine.Location = new System.Drawing.Point(142, 74);
             this.inputMedicine.Margin = new System.Windows.Forms.Padding(5);
             this.inputMedicine.Name = "inputMedicine";

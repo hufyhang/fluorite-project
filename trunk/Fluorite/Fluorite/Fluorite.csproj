@@ -65,6 +65,7 @@
     <Compile Include="Control\UCStartupSystem.cs" />
     <Compile Include="Control\UCYaojiUI.cs" />
     <Compile Include="Control\UCYunshuUI.cs" />
+    <Compile Include="Extend\CollectAutoCompleteSource.cs" />
     <Compile Include="Model\MySQLModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
