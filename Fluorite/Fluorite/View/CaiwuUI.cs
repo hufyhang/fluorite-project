@@ -18,6 +18,7 @@ namespace Fluorite.View
         {
             InitializeComponent();
             this.Username = Username;
+            this.Text += this.Username;
             this.inputSN.Text = new Control.UCGenerateSN(this.IDSQL).ToString();
             new Control.UCMySQLController(@"SELECT pack_id FROM pack", this.inputD, 0).Execute();
             this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM finance");
