@@ -17,14 +17,7 @@ namespace Fluorite.Control
         public Boolean Execute()
         {
             this.ViewScreen.Dispose();
-            if (new Control.UCStartupSystem().Execute())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
     }
 }
