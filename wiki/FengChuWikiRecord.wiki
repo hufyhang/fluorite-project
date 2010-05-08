@@ -1,3 +1,39 @@
+= 5/6/2010 =
+The presentation is very success
+
+= 5/4/2010 =
+We will do the final presentation. OK, give them a surprise.
+
+= 4/28/2010 =
+Tomorrow we will do the chopping block. we decide do a low profile presentation.
+
+= 4/20/2010 =
+I create some views today. Use view, the GUI develop should be easier.
+
+= 4/18/2010 =
+I modify the database again. I m a little dizzy with the relation between the tables.
+
+= 4/13/2010 =
+We meet the manager again. He think the platform is great.
+
+= 3/24/2010 =
+The platform has an embryo. It looks beautiful.
+
+= 3/18/2010 =
+To clear what the manager said yesterday. I think develop the platform maybe a little difficult, but challenge should improve something.
+
+= 3/17/2010 =
+Today we meeting with the client. The manager wants some new function. In fact i'm not really understand the requirement this time.
+
+= 3/11/2010 =
+Modify the database, add some foreign keys, the ER diagram need change again
+
+= 3/7/2010 =
+Extend the database. I think it has not the logical error.
+
+= 3/1/2010 =
+new semester, we are ready!
+
 = 1/5/2010 =
 
 we finish the report2 and presentation voice record. It takes many time to record our voice, we redo many times.
