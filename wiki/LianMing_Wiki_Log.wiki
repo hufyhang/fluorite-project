@@ -3,7 +3,7 @@
 ==May 4, 2010==
 I add LAN messenger and announcement broadcast. Now the platform is more like an operating system.
 
-==Mar 26, 2010==
+==Apr 26, 2010==
 Debug the system, and prepare the chopping block. There are some new ideas about the platform.
 
 ==Apr 13, 2010==
@@ -13,9 +13,9 @@ Meet with the client, they are to appreciate our software.
 Test the picture view, notepad, and multi-media player.
 
 ==Mar 27, 2010==
-They are add some functions of this platform such as picture view, notepad. It becomes more interesting.
+They add some functions of this platform such as picture view, notepad. It becomes more interesting.
 
-==3/20/2010==
+==Mar 20, 2010==
 We start to construct the platform. I design the virtual keyboard. We will use it in the login interface and record page.
 
 ==Mar 17, 2010==
