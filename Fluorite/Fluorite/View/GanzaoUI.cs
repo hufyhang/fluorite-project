@@ -20,7 +20,12 @@ namespace Fluorite.View
             this.Username = Username;
             this.Text += this.Username;
             this.inputSN.Text = new Control.UCGenerateSN(this.IDSQL).ToString();
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM water_statistics");
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM water_statistics_view");
+
+            if (!new Control.UCMySQLController(@"SELECT charging_id FROM charging_sheet", this.inputC, 0).Execute())
+            {
+                MessageBox.Show("UCMySQLController组件错误", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,7 +40,7 @@ namespace Fluorite.View
         {
             String UserID = new Control.UCGetUserID(this.Username).ToString();
             String SQL = @"INSERT INTO water_statistics VALUES ('" + this.inputSN.Text + @"','" + this.inputA.Value.ToString() + @"','" + this.inputB.Value.ToString() +
-                                @"','" + UserID + @"')";
+                                @"','" + UserID + @"','" + this.inputC.Text + @"')";
             if (new Control.UCMySQLUpdate(SQL).Execute())
             {
                 MessageBox.Show("信息记录完成", "操作完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -51,7 +56,7 @@ namespace Fluorite.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM water_statistics");
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM water_statistics_view");
         }
 
         #region VKeyboard

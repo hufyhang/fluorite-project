@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Fluorite.Control
 {
-    class UCYaojiUI : Control.UCController
+    class UCDesktop : Control.UCController
     {
+        private int Index = 0;
         private String Username = null;
 
-        public UCYaojiUI(String Username)
+        public UCDesktop(int Index, String Username)
         {
+            this.Index = Index;
             this.Username = Username;
         }
 
         public Boolean Execute()
         {
-            new View.YaojiUI(this.Username).Show();
+            new View.HomeScreenUI(this.Index, this.Username).ShowDialog();
             return true;
         }
     }

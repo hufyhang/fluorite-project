@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlphaBlendTextBox, Version=1.0.1270.35793, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\My Workstation\C#\2Dooo\2Dooo\bin\Release\DevComponents.DotNetBar2.dll</HintPath>
@@ -54,10 +58,12 @@
     <Compile Include="Control\UCCheckPassword.cs" />
     <Compile Include="Control\UCCollectWorkGroups.cs" />
     <Compile Include="Control\UCController.cs" />
+    <Compile Include="Control\UCDesktop.cs" />
     <Compile Include="Control\UCExitSystem.cs" />
     <Compile Include="Control\UCGanzaoUI.cs" />
     <Compile Include="Control\UCGenerateSN.cs" />
     <Compile Include="Control\UCGetUserID.cs" />
+    <Compile Include="Control\UCIconLaunch.cs" />
     <Compile Include="Control\UCLogin.cs" />
     <Compile Include="Control\UCMySQLController.cs" />
     <Compile Include="Control\UCMySQLUpdate.cs" />
@@ -74,6 +80,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AddValueUI.resx">
+      <DependentUpon>AddValueUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CaikuangUI.resx">
       <DependentUpon>CaikuangUI.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -86,8 +96,32 @@
       <DependentUpon>GanzaoUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HomeScreenUI.resx">
+      <DependentUpon>HomeScreenUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LauncherUI.resx">
+      <DependentUpon>LauncherUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LocalSearchUI.resx">
+      <DependentUpon>LocalSearchUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MediaPlayerUI.resx">
+      <DependentUpon>MediaPlayerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NotepadUI.resx">
+      <DependentUpon>NotepadUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PictureViewerUI.resx">
+      <DependentUpon>PictureViewerUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SystemHost.resx">
@@ -105,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,6 +149,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\AddValueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddValueUI.Designer.cs">
+      <DependentUpon>AddValueUI.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CaikuangUI.cs">
       <SubType>Form</SubType>
@@ -133,11 +174,47 @@
     <Compile Include="View\GanzaoUI.Designer.cs">
       <DependentUpon>GanzaoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HomeScreenUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomeScreenUI.Designer.cs">
+      <DependentUpon>HomeScreenUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LauncherUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LauncherUI.Designer.cs">
+      <DependentUpon>LauncherUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LocalSearchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LocalSearchUI.Designer.cs">
+      <DependentUpon>LocalSearchUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MediaPlayerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MediaPlayerUI.Designer.cs">
+      <DependentUpon>MediaPlayerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NotepadUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NotepadUI.Designer.cs">
+      <DependentUpon>NotepadUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PictureViewerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PictureViewerUI.Designer.cs">
+      <DependentUpon>PictureViewerUI.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SystemHost.cs">
       <SubType>Form</SubType>
@@ -157,6 +234,51 @@
     <Compile Include="View\YunshuUI.Designer.cs">
       <DependentUpon>YunshuUI.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\Wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\JPEG File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\MOV File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\TXT File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\Network Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\Alert_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\greentea003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imgs\serial 5\Debugging.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

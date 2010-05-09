@@ -26,7 +26,7 @@ namespace Fluorite.View
             this.Username = Username;
             this.Text += this.Username;
             this.inputSN.Text = new Control.UCGenerateSN(this.IDSQL).ToString();
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM material");
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM material_view");
         }
 
         protected void SelectControl()
@@ -67,7 +67,7 @@ namespace Fluorite.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM material");
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM material_view");
         }
 
         #region VKeyboard

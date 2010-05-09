@@ -19,7 +19,6 @@ namespace Fluorite.Control
         public Boolean Execute()
         {
             Boolean result = false;
-
             switch (this.Index)
             {
                 case 0:
