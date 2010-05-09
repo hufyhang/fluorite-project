@@ -1,37 +1,34 @@
 =Developing Log for the Project.=
 
-5/4/2010
+==May 4, 2010==
 I add LAN messenger and announcement broadcast. Now the platform is more like an operating system.
 
-4/26/2010
+==Mar 26, 2010==
 Debug the system, and prepare the chopping block. There are some new ideas about the platform.
 
-4/13/2010
+==Apr 13, 2010==
 Meet with the client, they are to appreciate our software.
 
-4/7/2010
+==Apr 7, 2010==
 Test the picture view, notepad, and multi-media player.
 
-
-3/27/2010
+==Mar 27, 2010==
 They are add some functions of this platform such as picture view, notepad. It becomes more interesting.
 
-3/20/2010
+==3/20/2010==
 We start to construct the platform. I design the virtual keyboard. We will use it in the login interface and record page.
 
-3/5, 2010
-We are meeting with the client. Discuss the project, and how this project will go in next step.
-
-
-3/17/2010
+==Mar 17, 2010==
 Our team meets the client today; show the system to the manager. He wants us to add some functions to make the employees work easily.
 
-
-3/15/2010
+==Mar 15, 2010==
 The system is OK. GUI looks good. I think the client would be happy with this.
 
-3/10/2010
+==Mar 10, 2010==
 Team meeting. We discuss the main function again. Modify the details. The database need add something, I’m in waiting.
+
+==Mar 5, 2010==
+We are meeting with the client. Discuss the project, and how this project will go in next step.
 
 == Jan 5, 2010 ==
 
