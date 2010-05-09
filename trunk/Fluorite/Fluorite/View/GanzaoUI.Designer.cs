@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.inputC = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,14 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputA)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5);
@@ -79,6 +77,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.inputC);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -95,6 +95,27 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新流程";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // inputC
+            // 
+            this.inputC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inputC.FormattingEnabled = true;
+            this.inputC.Location = new System.Drawing.Point(146, 207);
+            this.inputC.Margin = new System.Windows.Forms.Padding(5);
+            this.inputC.Name = "inputC";
+            this.inputC.Size = new System.Drawing.Size(217, 29);
+            this.inputC.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(20, 207);
+            this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 25);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "药剂流水  ：";
             // 
             // groupBox1
             // 
@@ -132,6 +153,7 @@
             // button11
             // 
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Enabled = false;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(19, 201);
             this.button11.Name = "button11";
@@ -362,27 +384,6 @@
             this.dataGridView.Size = new System.Drawing.Size(678, 316);
             this.dataGridView.TabIndex = 0;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(688, 326);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "退出登录";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(294, 121);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 55);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "退出登录";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // GanzaoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -408,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputA)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -423,8 +423,6 @@
         private System.Windows.Forms.TextBox inputSN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView;
@@ -442,5 +440,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.ComboBox inputC;
+        private System.Windows.Forms.Label label6;
     }
 }

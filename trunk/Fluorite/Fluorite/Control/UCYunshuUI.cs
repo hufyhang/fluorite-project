@@ -15,7 +15,7 @@ namespace Fluorite.Control
 
         public Boolean Execute()
         {
-            new View.YunshuUI(this.Username).ShowDialog();
+            new View.YunshuUI(this.Username).Show();
             return true;
         }
     }

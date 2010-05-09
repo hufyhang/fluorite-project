@@ -13,15 +13,44 @@ namespace Fluorite.View
         private String Username = null;
         private String IDSQL = @"SELECT finance_id FROM finance";
         private NumericUpDown CurrentNumber = null;
+        private TextBox CurrentText = null;
+        private int ControlFlag = 0;
 
         public CaiwuUI(String Username)
         {
             InitializeComponent();
+
+            this.initialEvents();
+
+            this.groupBox1.Visible = true;
+            this.groupBox2.Visible = false;
+
             this.Username = Username;
             this.Text += this.Username;
             this.inputSN.Text = new Control.UCGenerateSN(this.IDSQL).ToString();
-            new Control.UCMySQLController(@"SELECT pack_id FROM pack", this.inputD, 0).Execute();
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM finance");
+            new Control.UCMySQLController(@"SELECT ID FROM product", this.inputD, 0).Execute();
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM finance_view");
+        }
+
+        protected void initialEvents()
+        {
+            this.inputName.GotFocus += new EventHandler(inputName_GotFocus);
+        }
+
+        protected void inputName_GotFocus(object sender, EventArgs e)
+        {
+            this.Width = 1000;
+            this.Refresh();
+            this.AnalysisControl(sender);
+            this.CurrentText = this.inputName;
+        }
+
+        protected void CloseKeyboard()
+        {
+            this.Width = 640;
+            this.Refresh();
+            this.groupBox2.Visible = false;
+            this.groupBox1.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,109 +91,278 @@ namespace Fluorite.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM finance");
+            this.dataGridView.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM finance_view");
         }
 
         #region VKeyboard
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            this.SelectControl();
-            SendKeys.Send(@".");
-        }
+            switch (((Button)sender).Text)
+            {
+                case "1":
+                    this.SelectControl();
+                    SendKeys.Send(@"1");
+                    break;
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"0");
-        }
+                case "2":
+                    this.SelectControl();
+                    SendKeys.Send(@"2");
+                    break;
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send("{BKSP}");
-        }
+                case "3":
+                    this.SelectControl();
+                    SendKeys.Send(@"3");
+                    break;
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"1");
-        }
+                case "4":
+                    this.SelectControl();
+                    SendKeys.Send(@"4");
+                    break;
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"2");
-        }
+                case "5":
+                    this.SelectControl();
+                    SendKeys.Send(@"5");
+                    break;
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"3");
-        }
+                case "6":
+                    this.SelectControl();
+                    SendKeys.Send(@"6");
+                    break;
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"4");
-        }
+                case "7":
+                    this.SelectControl();
+                    SendKeys.Send(@"7");
+                    break;
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"5");
-        }
+                case "8":
+                    this.SelectControl();
+                    SendKeys.Send(@"8");
+                    break;
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"6");
-        }
+                case "9":
+                    this.SelectControl();
+                    SendKeys.Send(@"9");
+                    break;
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"7");
-        }
+                case "0":
+                    this.SelectControl();
+                    SendKeys.Send(@"0");
+                    break;
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"8");
-        }
+                case ".":
+                    this.SelectControl();
+                    SendKeys.Send(@".");
+                    break;
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            this.SelectControl();
-            SendKeys.Send(@"9");
+                case "←":
+                    this.SelectControl();
+                    SendKeys.Send("{BKSP}");
+                    break;
+
+                case "A":
+                    this.SelectControl();
+                    SendKeys.Send(@"a");
+                    break;
+
+                case "B":
+                    this.SelectControl();
+                    SendKeys.Send(@"b");
+                    break;
+
+                case "C":
+                    this.SelectControl();
+                    SendKeys.Send(@"c");
+                    break;
+
+                case "D":
+                    this.SelectControl();
+                    SendKeys.Send(@"d");
+                    break;
+
+                case "E":
+                    this.SelectControl();
+                    SendKeys.Send(@"e");
+                    break;
+
+                case "F":
+                    this.SelectControl();
+                    SendKeys.Send(@"f");
+                    break;
+
+                case "G":
+                    this.SelectControl();
+                    SendKeys.Send(@"g");
+                    break;
+
+                case "H":
+                    this.SelectControl();
+                    SendKeys.Send(@"h");
+                    break;
+
+                case "I":
+                    this.SelectControl();
+                    SendKeys.Send(@"i");
+                    break;
+
+                case "J":
+                    this.SelectControl();
+                    SendKeys.Send(@"j");
+                    break;
+
+                case "K":
+                    this.SelectControl();
+                    SendKeys.Send(@"k");
+                    break;
+
+                case "L":
+                    this.SelectControl();
+                    SendKeys.Send(@"l");
+                    break;
+
+                case "M":
+                    this.SelectControl();
+                    SendKeys.Send(@"m");
+                    break;
+
+                case "N":
+                    this.SelectControl();
+                    SendKeys.Send(@"n");
+                    break;
+
+                case "O":
+                    this.SelectControl();
+                    SendKeys.Send(@"o");
+                    break;
+
+                case "P":
+                    this.SelectControl();
+                    SendKeys.Send(@"p");
+                    break;
+
+                case "Q":
+                    this.SelectControl();
+                    SendKeys.Send(@"q");
+                    break;
+
+                case "R":
+                    this.SelectControl();
+                    SendKeys.Send(@"r");
+                    break;
+
+                case "S":
+                    this.SelectControl();
+                    SendKeys.Send(@"s");
+                    break;
+
+                case "T":
+                    this.SelectControl();
+                    SendKeys.Send(@"t");
+                    break;
+
+                case "U":
+                    this.SelectControl();
+                    SendKeys.Send(@"u");
+                    break;
+
+                case "V":
+                    this.SelectControl();
+                    SendKeys.Send(@"v");
+                    break;
+
+                case "W":
+                    this.SelectControl();
+                    SendKeys.Send(@"w");
+                    break;
+
+                case "X":
+                    this.SelectControl();
+                    SendKeys.Send(@"x");
+                    break;
+
+                case "Y":
+                    this.SelectControl();
+                    SendKeys.Send(@"y");
+                    break;
+
+                case "Z":
+                    this.SelectControl();
+                    SendKeys.Send(@"z");
+                    break;
+
+                case "OK":
+                    this.CloseKeyboard();
+                    break;
+
+                case "Space":
+                    this.SelectControl();
+                    SendKeys.Send(@" ");
+                    break;
+            }
         }
 
         protected void SelectControl()
         {
             try
             {
-                this.CurrentNumber.Select();
+                switch (this.ControlFlag)
+                {
+                    case 1:
+                        this.CurrentNumber.Select();
+                        break;
+
+                    case 2:
+                        this.CurrentText.Select();
+                        break;
+
+                    default:
+                        break;
+                }
             }
             catch (NullReferenceException)
             {
             }
         }
 
+        protected void AnalysisControl(object sender)
+        {
+            if (sender is NumericUpDown)
+            {
+                this.ControlFlag = 1;
+            }
+            else if (sender is TextBox)
+            {
+                this.ControlFlag = 2;
+            }
+            else
+            {
+                this.ControlFlag = 0;
+            }
+        }
+
         private void inputA_MouseClick(object sender, MouseEventArgs e)
         {
+            this.AnalysisControl(sender);
             this.CurrentNumber = this.inputA;
         }
 
         private void inputB_MouseClick(object sender, MouseEventArgs e)
         {
+            this.AnalysisControl(sender);
             this.CurrentNumber = this.inputB;
         }
 
         private void inputC_MouseClick(object sender, MouseEventArgs e)
         {
+            this.AnalysisControl(sender);
             this.CurrentNumber = this.inputC;
         }
         #endregion
 
+        private void inputName_Click(object sender, EventArgs e)
+        {
+                this.groupBox1.Visible = false;
+                this.groupBox2.Visible = true;
+        }
     }
 }

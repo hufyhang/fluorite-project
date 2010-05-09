@@ -15,7 +15,7 @@ namespace Fluorite.Control
 
         public Boolean Execute()
         {
-            new View.CaikuangUI(this.Username).ShowDialog();
+            new View.CaikuangUI(this.Username).Show();
             return true;
         }
     }

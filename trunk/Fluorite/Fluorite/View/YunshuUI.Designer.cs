@@ -46,6 +46,8 @@
             this.button15 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.inputGanzaoID = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.inputPackDateTime = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.inputPackWeight = new System.Windows.Forms.NumericUpDown();
@@ -73,8 +75,6 @@
             this.dataGridViewPack = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dataGridViewProduct = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,14 +89,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPack)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5);
@@ -154,6 +152,7 @@
             // button11
             // 
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Enabled = false;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(19, 201);
             this.button11.Name = "button11";
@@ -298,6 +297,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.inputGanzaoID);
+            this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.inputPackDateTime);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.inputPackWeight);
@@ -313,6 +314,27 @@
             this.tabPage4.Text = "包装";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // inputGanzaoID
+            // 
+            this.inputGanzaoID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inputGanzaoID.FormattingEnabled = true;
+            this.inputGanzaoID.Location = new System.Drawing.Point(157, 200);
+            this.inputGanzaoID.Margin = new System.Windows.Forms.Padding(5);
+            this.inputGanzaoID.Name = "inputGanzaoID";
+            this.inputGanzaoID.Size = new System.Drawing.Size(217, 29);
+            this.inputGanzaoID.TabIndex = 35;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(31, 200);
+            this.label10.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 25);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "干燥流水 ：";
+            // 
             // inputPackDateTime
             // 
             this.inputPackDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -323,7 +345,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 242);
+            this.button1.Location = new System.Drawing.Point(186, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 35);
             this.button1.TabIndex = 21;
@@ -415,7 +437,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(196, 278);
+            this.button3.Location = new System.Drawing.Point(181, 278);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 35);
             this.button3.TabIndex = 33;
@@ -428,7 +450,7 @@
             this.inputD.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inputD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputD.FormattingEnabled = true;
-            this.inputD.Location = new System.Drawing.Point(138, 241);
+            this.inputD.Location = new System.Drawing.Point(143, 241);
             this.inputD.Margin = new System.Windows.Forms.Padding(5);
             this.inputD.Name = "inputD";
             this.inputD.Size = new System.Drawing.Size(296, 29);
@@ -439,7 +461,7 @@
             this.inputC.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inputC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputC.FormattingEnabled = true;
-            this.inputC.Location = new System.Drawing.Point(138, 198);
+            this.inputC.Location = new System.Drawing.Point(143, 198);
             this.inputC.Margin = new System.Windows.Forms.Padding(5);
             this.inputC.Name = "inputC";
             this.inputC.Size = new System.Drawing.Size(296, 29);
@@ -450,7 +472,7 @@
             this.inputB.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputB.FormattingEnabled = true;
-            this.inputB.Location = new System.Drawing.Point(138, 155);
+            this.inputB.Location = new System.Drawing.Point(143, 155);
             this.inputB.Margin = new System.Windows.Forms.Padding(5);
             this.inputB.Name = "inputB";
             this.inputB.Size = new System.Drawing.Size(296, 29);
@@ -505,7 +527,7 @@
             this.inputA.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputA.FormattingEnabled = true;
-            this.inputA.Location = new System.Drawing.Point(138, 109);
+            this.inputA.Location = new System.Drawing.Point(143, 109);
             this.inputA.Margin = new System.Windows.Forms.Padding(5);
             this.inputA.Name = "inputA";
             this.inputA.Size = new System.Drawing.Size(296, 29);
@@ -620,27 +642,6 @@
             this.dataGridViewProduct.Size = new System.Drawing.Size(691, 318);
             this.dataGridViewProduct.TabIndex = 0;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(743, 342);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "退出登录";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(289, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 57);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "退出登录";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -679,7 +680,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPack)).EndInit();
             this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).EndInit();
-            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -689,8 +689,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
@@ -733,6 +731,8 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.ComboBox inputGanzaoID;
+        private System.Windows.Forms.Label label10;
 
     }
 }

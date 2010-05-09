@@ -24,8 +24,12 @@ namespace Fluorite.View
             this.initialComboBox();
             this.inputPackSN.Text = new Control.UCGenerateSN(this.PACKIDSQL).ToString();
             this.inputProductSN.Text = new Control.UCGenerateSN(this.PRODUCTIDSQL).ToString();
-            this.dataGridViewPack.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM pack");
-            this.dataGridViewProduct.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM product");
+            this.dataGridViewPack.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM pack_view");
+            this.dataGridViewProduct.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM product_view");
+            if (!new Control.UCMySQLController(@"SELECT water_id FROM water_statistics", this.inputGanzaoID, 0).Execute())
+            {
+                MessageBox.Show("UCMySQLController组件错误", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         protected void initialComboBox()
@@ -67,7 +71,7 @@ namespace Fluorite.View
         {
             String UserID = new Control.UCGetUserID(this.Username).ToString();
             String SQL = @"INSERT INTO pack VALUES ('" + this.inputPackSN.Text + @"','" + this.inputPackDateTime.Text + @"','" +
-                    this.inputPackWeight.Value.ToString() + @"','" + UserID + @"')";
+                    this.inputPackWeight.Value.ToString() + @"','" + UserID + @"','" + this.inputGanzaoID.Text + @"')";
             if (new Control.UCMySQLUpdate(SQL).Execute())
             {
                 MessageBox.Show("信息记录完成", "操作完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,8 +106,8 @@ namespace Fluorite.View
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.dataGridViewPack.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM pack");
-            this.dataGridViewProduct.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM product");
+            this.dataGridViewPack.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM pack_view");
+            this.dataGridViewProduct.DataSource = new Model.MySQLModel().CollectFromDatabase(@"SELECT * FROM product_view");
         }
 
         #region VKeyboard

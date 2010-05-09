@@ -15,7 +15,7 @@ namespace Fluorite.Control
 
         public Boolean Execute()
         {
-            new View.GanzaoUI(this.Username).ShowDialog();
+            new View.GanzaoUI(this.Username).Show();
             return true;
         }
     }
