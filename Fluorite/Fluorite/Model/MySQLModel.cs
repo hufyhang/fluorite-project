@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Copyright 2009, 2010 HANG Feifei, ZHU Hao, LIAN Ming, FENG Chu
+ * 
+ * This file is part of Fluorspar Mining Pipeline Working Platform.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -8,6 +14,9 @@ using MySQLDriverCS;
 
 namespace Fluorite.Model
 {
+    /// <summary>
+    /// MySQL Model
+    /// </summary>
     class MySQLModel
     {
         private readonly String ConfigurationLocation = Application.StartupPath + @"\Configs\Database";
@@ -17,6 +26,9 @@ namespace Fluorite.Model
         private String username;
         private String password;
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public MySQLModel()
         {
             this.GenerateConfigration(this.ConfigurationLocation);
@@ -28,6 +40,13 @@ namespace Fluorite.Model
             reader.Close();
         }
 
+        /// <summary>
+        /// Constructor with parameters.
+        /// </summary>
+        /// <param name="address">Database address</param>
+        /// <param name="database">Name of database</param>
+        /// <param name="username">Database username</param>
+        /// <param name="password">Database password</param>
         public MySQLModel(String address, String database, String username, String password)
         {
             this.address = address;
@@ -36,6 +55,10 @@ namespace Fluorite.Model
             this.password = password;
         }
 
+        /// <summary>
+        /// To generate a configuration file, automatically.
+        /// </summary>
+        /// <param name="configurationFile"></param>
         protected void GenerateConfigration(String configurationFile)
         {
             if (!new FileInfo(configurationFile).Exists)
@@ -46,6 +69,11 @@ namespace Fluorite.Model
             }
         }
 
+        /// <summary>
+        /// To update database.
+        /// </summary>
+        /// <param name="sql">SQL Statement</param>
+        /// <returns>Return TRUE if succeed, otherwife FALSE</returns>
         public Boolean UpdateDatabase(String sql)
         {
             try
@@ -64,6 +92,11 @@ namespace Fluorite.Model
             }
         }
 
+        /// <summary>
+        /// To collect information/feedback from database.
+        /// </summary>
+        /// <param name="sql">SQL Statement</param>
+        /// <returns>Returns a DataTable</returns>
         public DataTable CollectFromDatabase(String sql)
         {
             DataTable dataTable = new DataTable();

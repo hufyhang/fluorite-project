@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Copyright 2009, 2010 HANG Feifei, ZHU Hao, LIAN Ming, FENG Chu
+ * 
+ * This file is part of Fluorspar Mining Pipeline Working Platform.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -7,12 +13,21 @@ using System.Windows.Forms;
 
 namespace Fluorite.Control
 {
+    /// <summary>
+    /// UC: To control the MySQL.
+    /// </summary>
     class UCMySQLController : Control.UCController
     {
         private String SQL;
         private Int32 columnNumber;
         private Object container = null;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="SQL">SQL statement.</param>
+        /// <param name="container">ColumnNumber statement.</param>
+        /// <param name="ColumnNumber">Container statement.</param>
         public UCMySQLController(String SQL, Object container, Int32 ColumnNumber)
         {
             this.SQL = SQL;
@@ -20,6 +35,10 @@ namespace Fluorite.Control
             this.container = container;
         }
 
+        /// <summary>
+        /// "Execute" interface
+        /// </summary>
+        /// <returns>Returns TRUE if succeed,otherwise FALSE.</returns>
         public Boolean Execute()
         {
             DataTable dataTable = null;
@@ -34,6 +53,10 @@ namespace Fluorite.Control
             }
         }
 
+        /// <summary>
+        /// To insert information to containers.
+        /// </summary>
+        /// <param name="dataTable">DataTable source.</param>
         protected void InsertIntoContainer(DataTable dataTable)
         {
             foreach (DataRow dataRow in dataTable.Rows)
@@ -56,6 +79,10 @@ namespace Fluorite.Control
             }
         }
 
+        /// <summary>
+        /// To insert information into string.
+        /// </summary>
+        /// <returns>Returns a string if correct,otherwise null.</returns>
         private String InsetIntoString()
         {
             DataTable dataTable = new Model.MySQLModel().CollectFromDatabase(this.SQL);
@@ -69,6 +96,10 @@ namespace Fluorite.Control
             }
         }
 
+        /// <summary>
+        /// Override "ToString" interface
+        /// </summary>
+        /// <returns>Returns a string.</returns>
         public override String ToString()
         {
             return this.InsetIntoString();

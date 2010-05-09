@@ -1,16 +1,32 @@
-﻿using System;
+﻿/*
+ * Copyright 2009, 2010 HANG Feifei, ZHU Hao, LIAN Ming, FENG Chu
+ * 
+ * This file is part of Fluorspar Mining Pipeline Working Platform.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
 namespace Fluorite.Control
 {
+    
+    /// <summary>
+    /// UC: To launch built-in system components.
+    /// </summary>
     class UCIconLaunch : Control.UCController
     {
         private String IconName = null;
         private String UserName = null;
         private int UserIndex = 0;
 
+        /// <summary>
+        /// constructor.
+        /// </summary>
+        /// <param name="UserIndex">Name statement.</param>
+        /// <param name="UserName">Username statement.</param>
+        /// <param name="Name">UserIndex statement.</param>
         public UCIconLaunch(int UserIndex, String UserName, String Name)
         {
             this.IconName = Name;
@@ -18,6 +34,10 @@ namespace Fluorite.Control
             this.UserIndex = UserIndex;
         }
 
+        /// <summary>
+        /// "Execute" interface
+        /// </summary>
+        /// <returns>Returns TRUE if succeed,otherwise FALSE.</returns>
         public Boolean Execute()
         {
             Boolean result = true;
