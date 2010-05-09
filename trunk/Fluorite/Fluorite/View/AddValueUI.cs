@@ -9,16 +9,25 @@ using System.Windows.Forms;
 
 namespace Fluorite.View
 {
+    /// <summary>
+    /// View: AddValueUI.
+    /// </summary>
     public partial class AddValueUI : Form
     {
         private readonly String fileSystem = Application.StartupPath + @"\File System\Plugins";
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public AddValueUI()
         {
             InitializeComponent();
             this.LoadPlugins();
         }
 
+        /// <summary>
+        /// To load all add-value components from "/File System/Plugins", atutomatically.
+        /// </summary>
         protected void LoadPlugins()
         {
             int index = 0;
@@ -34,6 +43,11 @@ namespace Fluorite.View
             this.toolStripStatusLabel2.Text = index.ToString();
         }
 
+        /// <summary>
+        /// To detect and collect executable file for each add-value components.
+        /// </summary>
+        /// <param name="Dir">Path of specified component.</param>
+        /// <returns>Returns path of runnable file.</returns>
         protected String GetExecutable(DirectoryInfo Dir)
         {
             String answer = "";

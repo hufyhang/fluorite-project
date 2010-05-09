@@ -24,6 +24,10 @@ namespace Fluorite.View
             this.DoSearch.BeginInvoke(Application.StartupPath + @"\File System", null, null);
         }
 
+        /// <summary>
+        /// Delegator: To search among "/File System".
+        /// </summary>
+        /// <param name="path">Searching target.</param>
         protected delegate void BeginToSearch(String path);
         protected void Search(String path)
         {

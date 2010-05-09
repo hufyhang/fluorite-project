@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Copyright 2009, 2010 HANG Feifei, ZHU Hao, LIAN Ming, FENG Chu
+ * 
+ * This file is part of Fluorspar Mining Pipeline Working Platform.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -7,9 +13,18 @@ using System.IO;
 
 namespace Fluorite.Extend
 {
+    /// <summary>
+    /// To collect auto complete source.
+    /// </summary>
     class CollectAutoCompleteSource
     {
         private readonly String File = Application.StartupPath + @"\Configs\Source";
+
+        /// <summary>
+        /// "Execute" interface.
+        /// </summary>
+        /// <param name="textBox">The TextBox control to contain Auto Complete Source</param>
+        /// <returns>Returns TRUE if succeed, otherwise FALSE</returns>
         public Boolean Execute(TextBox textBox)
         {
             Boolean result = false;

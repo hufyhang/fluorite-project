@@ -29,6 +29,11 @@ namespace Fluorite.View
             this.loadAnnouncement();
         }
 
+        /// <summary>
+        /// To get announcement file's address from configuration file.
+        /// </summary>
+        /// <param name="path">The path of configuration file.</param>
+        /// <returns>Returns the address of announcement.</returns>
         protected String GetAnnounceAddress(String path)
         {
             StreamReader reader = new StreamReader(path);
@@ -63,6 +68,9 @@ namespace Fluorite.View
             this.labelMessage.BackAlpha = 30;
         }
 
+        /// <summary>
+        /// To collect and display contents from announcement.
+        /// </summary>
         protected void loadAnnouncement()
         {
             StreamReader reader = new StreamReader(this.AnnouceFile, System.Text.Encoding.Default);

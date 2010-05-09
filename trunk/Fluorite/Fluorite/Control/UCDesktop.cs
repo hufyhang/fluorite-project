@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Copyright 2009, 2010 HANG Feifei, ZHU Hao, LIAN Ming, FENG Chu
+ * 
+ * This file is part of Fluorspar Mining Pipeline Working Platform.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
